@@ -1,3 +1,13 @@
+### Projeto de Desenvolvimento Web da UNA
+
+#### Requisitos: 
+- Instalar o [Composer](https://getcomposer.org/)
+- Execultar o camando ```$ composer update``` dentro da pasta do projeto
+
+#### Comandos Laravel: 
+- Inicia o servidor:
+```$ php artisan serve ```
+---
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

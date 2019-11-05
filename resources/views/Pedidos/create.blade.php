@@ -27,18 +27,20 @@
     <form action="{{ route('pedidos.store') }}" method="POST">
         {{csrf_field()}}
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nome</strong>
-                    {!! Form::select('pedidos', $pedidos, null ) !!}
-                </div>
-            </div>
             <div class="col-xs 12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detalhes</strong>
-                    <input class="form-control" style="height:150px" name="user" placeholder="Detalhes do usuario">
+                    <strong>Usuário</strong>
+                    <input type="text" name="user" class="form-control" placeholder="Código do usuário">
                 </div>
-            <div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Prato</strong>
+                    <input type="text" name="prato" class="form-control" placeholder="Código do prato">
+                </div>
+            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn-primary"> Enviar </button>
             </div>

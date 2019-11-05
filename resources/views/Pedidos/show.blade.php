@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Detalhes do Produto</h2>
+                <h2>Detalhes do Pedido</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-primary" href="{{ route('produtos.index') }}"> Voltar</a>
+                <a class="btn btn-primary" href="{{ route('pedidos.index') }}"> Voltar</a>
             </div>
         </div>
     </div>
@@ -17,35 +17,35 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>ID:</strong>
-                {{ $produto->id }}
+                {{ $pedido->id }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
-                <strong>Nome:</strong>
-                {{ $produto->nome}}
+                <strong>Usuário:</strong>
+                {{ $pedido->user}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
-                <strong>Detalhes:</strong>
-                {{ $produto->detalhes}}
+                <strong>Prato:</strong>
+                {{ $pedido->prato}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Criado em:</strong>
-                {{ date('d/m/y - H:i', strtotime($produto->created_at)) }}
+                {{ date('d/m/y - H:i', strtotime($pedido->created_at)) }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Atualizado em:</strong>
-                {{ date('d/m/y - H:i', strtotime($produto->updated_at)) }}
+                {{ date('d/m/y - H:i', strtotime($pedido->updated_at)) }}
             </div>
         </div>
     </div>

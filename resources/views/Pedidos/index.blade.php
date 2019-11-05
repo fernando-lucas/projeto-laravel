@@ -23,7 +23,7 @@
     <table class="table table-bordered">
         <tr>
             <th>Item</th>
-            <th>Nome</th>
+            <th>Prato</th>
             <th>Usuário</th>
             <th width="280px">Ação</th>
         </tr>
@@ -33,7 +33,7 @@
             <td>{{ $pedido->prato }}</td>
             <td>{{ $pedido->user }}</td>
             <td>
-                <form action="{{ route('pedidos.destroy', $produto->id) }}" method="POST">
+                <form action="{{ route('pedidos.destroy', $pedido->id) }}" method="POST">
                     {{csrf_field()}}
                     <a class="btn btn-info" href="{{ route('pedidos.show', $pedido->id) }}"> Detalhes </a>
                     <a class="btn btn-primary" href="{{ route('pedidos.edit', $pedido->id) }}"> Editar </a>

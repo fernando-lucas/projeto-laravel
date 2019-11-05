@@ -29,15 +29,15 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Nome:</strong>
+                        <strong>Usuário:</strong>
                         <input name="_method" type="hidden" value="PATCH">
-                        <input type="text" name="nome" value="{{ $produto->nome }}" class="form-control" placeholder="Nome do pedido">
+                        <input type="text" name="user" value="{{ $pedido->user }}" class="form-control" placeholder="Código do usuário">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Detalhes:</strong>
-                        <textarea class="form-control" style="height:150px" name="detalhes" placeholder="Detalhes do produto"> {{$produto->detalhes}} </textarea>
+                        <strong>Prato:</strong>
+                        <input type="text" name="prato" value="{{ $pedido->prato }}" class="form-control" placeholder="Código do prato">
                     </div>
                 </div>
 

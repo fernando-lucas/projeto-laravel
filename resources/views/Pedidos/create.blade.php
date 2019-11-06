@@ -30,14 +30,22 @@
             <div class="col-xs 12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Usuário</strong>
-                    <input type="text" name="user" class="form-control" placeholder="Código do usuário">
+                    <select class="form-control" name="id_usuario">
+                        @foreach($usuarios as $item)
+                            <option value="{{$item->id}}">{{$item->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Prato</strong>
-                    <input type="text" name="prato" class="form-control" placeholder="Código do prato">
+                    <select class="form-control" name="id_prato">
+                        @foreach($produtos as $item)
+                            <option value="{{$item->id}}">{{$item->nome}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 

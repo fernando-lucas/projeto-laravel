@@ -28,10 +28,10 @@ class PedidoController extends Controller
      */
     public function create()
     {
-        $usuarios = User::pluck('id', 'name');
-        $produtos = Produto::pluck('id', 'nome');
+        $usuarios = User::all('id', 'name');
+        $produtos = Produto::all('id', 'nome');
 
-        return view('pedidos.create');
+        return view('pedidos.create',compact('usuarios','produtos'));
     }
 
     /**
@@ -42,10 +42,7 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'user' => 'required',
-            'prato' => 'required',
-        ]);
+
 
         Pedido::create($request->all());
 
@@ -61,7 +58,8 @@ class PedidoController extends Controller
      */
     public function show(Pedido $pedido)
     {
-        return view('pedidos.show', compact('pedido'));
+        $pedidosFinal = Pedido::where('users.id',$pedido['user'])->join('produtos','pedidos.prato','=','produtos.id')->join('users','pedidos.user','=','users.id')->select('users.name','produtos.nome','pedidos.id')->first();
+        return view('pedidos.show', compact('pedidosFinal'));
     }
 
     /**

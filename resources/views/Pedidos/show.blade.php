@@ -17,35 +17,35 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>ID:</strong>
-                {{ $pedido->id }}
+                {{ $pedidosFinal->id }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Usuário:</strong>
-                {{ $pedido->user}}
+                {{ $pedidosFinal->name}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Prato:</strong>
-                {{ $pedido->prato}}
+                {{ $pedidosFinal->nome}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Criado em:</strong>
-                {{ date('d/m/y - H:i', strtotime($pedido->created_at)) }}
+                {{ date('d/m/y - H:i', strtotime($pedidosFinal->created_at)) }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md- 12">
             <div class=" form-group">
                 <strong>Atualizado em:</strong>
-                {{ date('d/m/y - H:i', strtotime($pedido->updated_at)) }}
+                {{ date('d/m/y - H:i', strtotime($pedidosFinal->updated_at)) }}
             </div>
         </div>
     </div>
